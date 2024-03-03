@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dragon Meteor</title>
+    <script src="https://cdn.jsdelivr.net/npm/phaser@3.55.2/dist/phaser.min.js
+">
+
+    </script>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: black;
+        }
+
+    </style>
+</head>
+
+<script type="module">
+    // definindo o que cada cena significa em arquivos
+     import Scene1 from './Scene1.js'
+     import Scene2 from './Scene2.js'
+     import Scene3 from './Scene3.js'
+     // definindo a largura do jogo
+     const larguraJogo = 1700
+        
+        // Definindo altura do jogo
+        const alturaJogo = 780;
+
+        const config = {
+            type: Phaser.AUTO,
+            width: larguraJogo,
+            height: alturaJogo,
+
+            physics: {
+                default: 'arcade',
+                arcade: {
+                    gravity: { y: 900}, 
+                }
+            },
+
+            scene: 
+            //lista com as cenas
+                [Scene1, Scene2, Scene3]
+            
+        };
+
+        const game = new Phaser.Game(config);
+
+
+
+
+
+</script>
+
+<body>
+    <script type="module">
